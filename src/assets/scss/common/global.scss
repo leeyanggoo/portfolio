@@ -1,0 +1,218 @@
+:root {
+  --pad: max(20px, 2vmin);
+  --radi: 16px;
+  --black: #0e0e0e;
+  --beige: #f4e9e1;
+  --white: #ffffff;
+  --orange: #ff3d00;
+  --purple: #5900cc;
+  --blue: #2835f8;
+  --red: #ff003d;
+  --yellow: #ffff00;
+  --green: #05ff00;
+  --offwhite: #f4e9e1;
+  --grey: #83807c;
+  --pink: #fa89a8;
+  --lightBlack: #484036;
+}
+
+.orange {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.black {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+// body
+body,
+html {
+  background-color: #f4e9e1;
+  color: var(--black);
+  height: 100%;
+  transition: background-color 0.5s ease-in-out;
+  width: 100%;
+  font-family: "Red Hat Display";
+  font-weight: 400;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+  #header {
+    position: fixed;
+    width: 220px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: var(--pad);
+  }
+  #main {
+    width: calc(100% - 220px);
+    // height: 100vh;
+    padding: var(--pad);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    padding: var(--pad);
+    background-color: var(--beige);
+    border-top: 1px solid #000;
+    overflow: hidden;
+  }
+}
+
+.section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.divider {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 2vw;
+  margin-bottom: 20px;
+  text-align: center;
+  p {
+    font-size: 1.5vw;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  .arrow__box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    > div {
+      display: flex;
+      justify-content: center;
+      width: 17px;
+      overflow: hidden;
+      &:nth-child(1) .arrow {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) .arrow {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) .arrow {
+        animation-delay: 0.3s;
+      }
+      .arrow {
+        width: 0;
+        height: 30px;
+        border: 1px solid;
+        border-radius: 2px;
+        position: relative;
+        animation: arrowDown 1.5s infinite;
+        &::after {
+          content: " ";
+          position: absolute;
+          top: 15px;
+          left: -6px;
+          width: 12px;
+          height: 12px;
+          border-bottom: 2px solid;
+          border-right: 2px solid;
+          border-radius: 2px;
+          transform: rotateZ(45deg);
+        }
+      }
+    }
+  }
+}
+@keyframes arrowDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  65% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+// title
+.title {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  h2 {
+    font-size: 16px;
+    color: #fff;
+    font-family: "Abel";
+    font-weight: 900;
+    padding: 0 max(2vw, 3vh);
+  }
+}
+
+// intro
+.intro {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  span {
+    font-size: 4vw;
+    line-height: 1;
+    font-family: "NanumSquareNeo";
+    font-weight: 100;
+    padding: max(2vw, 3vh);
+  }
+  h2 {
+    font-size: 12vw;
+    line-height: 0.7;
+    font-family: "Abel";
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: max(2vw, 3vh);
+  }
+}
+
+@media (max-width: 1023px) {
+  #header {
+    display: none !important;
+  }
+  #main {
+    width: 100% !important;
+    padding-bottom: 110px !important;
+  }
+  #footer {
+    display: block !important;
+  }
+  .intro {
+    height: 80vh !important;
+  }
+  .arrow__box {
+    gap: 5px !important;
+    > div {
+      width: 10px !important;
+    }
+  }
+  .tab__title {
+    font-size: 1.6vw !important;
+  }
+  .tab__num {
+    font-size: 1.5vw !important;
+    width: 3.5vw !important;
+  }
+}

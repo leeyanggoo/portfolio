@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  // 가로 확대 금지
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+// 공백 초기화
+body,
+div,
+dl,
+dd,
+dt,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+p,
+table,
+th,
+td,
+input,
+figure,
+figcaption,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+// a li 스타일 초기화
+a {
+  text-decoration: none;
+  color: #000;
+}
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+// 폰트 초기화
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+// 이미지 초기화
+img,
+svg,
+video {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+img,
+fieldset,
+button {
+  border: 0;
+  background-color: transparent;
+}

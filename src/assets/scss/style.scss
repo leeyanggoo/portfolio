@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// common
+@import "common/common.scss";
+@import "common/global.scss";
+
+// setting
+@import "setting/base.scss";
+@import "setting/font.scss";
+@import "setting/mixin.scss";
+
+// components
+@import "components/nav.scss";
+@import "components/intro.scss";
+@import "components/about.scss";
+@import "components/site.scss";
+@import "components/script.scss";
+@import "components/contact.scss";
+@import "components/navMobile.scss";
