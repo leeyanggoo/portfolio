@@ -1,13 +1,18 @@
 import p5 from "p5";
 
 function aboutME() {
-  let fontSize = parseInt(window.getComputedStyle(document.querySelector(".about__ascii")).getPropertyValue("font-size"));
+  let fontSize = parseInt(
+    window
+      .getComputedStyle(document.querySelector(".about__ascii"))
+      .getPropertyValue("font-size")
+  );
   // const aboutWrap = document.querySelector(".about__me");
 
   const density = " ·:-=+*#%@";
   // const density = "⣿ ⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾"
   let profile;
-  const heightPixelNum = Math.floor(930 / fontSize);
+  let screenHeight = window.screen.height;
+  const heightPixelNum = Math.floor(screenHeight / fontSize);
 
   /** 이미지 로드 */
   new p5((m) => {
@@ -15,7 +20,10 @@ function aboutME() {
       profile = m.loadImage("./assets/images/about/profile.png", (img) => {
         const originalWidth = profile.width;
         const originalHeight = profile.height;
-        img.resize(m.floor(((originalWidth * 1.75) / originalHeight) * heightPixelNum), heightPixelNum);
+        img.resize(
+          m.floor(((originalWidth * 1.75) / originalHeight) * heightPixelNum),
+          heightPixelNum
+        );
       });
     };
 
