@@ -6,7 +6,8 @@ import nav from "./assets/js/nav.js";
 import navMobile from "./assets/js/navMobile.js";
 import script from "./assets/js/script.js";
 import intro from "./assets/js/intro.js";
-import contact from "./assets/js/contact.js";
+// import contact from "./assets/js/contact.js";
+// import p55 from "./assets/js/p55.js";
 
 lenis();
 site();
@@ -14,5 +15,6 @@ script();
 aboutME();
 navMobile();
 intro();
-contact();
+// contact();
 nav();
+// p55();

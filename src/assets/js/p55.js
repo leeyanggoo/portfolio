@@ -7,7 +7,7 @@ function p55() {
   /** 이미지 로드 */
   new p5((p) => {
     p.preload = () => {
-      profile = p.loadImage("./assets/images/200.png", (img) => {
+      profile = p.loadImage("./assets/images/about/profile.png", (img) => {
         const logoWrapHeight = logoWrap.offsetHeight;
         const ratio = img.width / img.height;
         const resizedWidth = logoWrapHeight * ratio;

@@ -1,13 +1,15 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function site() {
   const sites = gsap.utils.toArray(".site");
   const siteTabs = gsap.utils.toArray(".site__tab");
-  let totalWidth = sites.reduce((total, element) => total + element.offsetWidth, 0);
+  let totalWidth = sites.reduce(
+    (total, element) => total + element.offsetWidth,
+    0
+  );
   let navWidth = document.querySelector("#header").offsetWidth;
 
   let siteScroll = gsap.to(sites, {
@@ -46,7 +48,11 @@ function site() {
     tab.addEventListener("click", siteTabClick);
   });
 
-  let getPosition = getScrollLookup(sites, siteScroll, `left ${navWidth + 20}px`);
+  let getPosition = getScrollLookup(
+    sites,
+    siteScroll,
+    `left ${navWidth + 20}px`
+  );
 
   function siteTabClick(e) {
     const siteTabIndex = parseInt(e.currentTarget.dataset.index);
@@ -71,7 +77,11 @@ function site() {
       let t = gsap.utils.toArray(target)[0],
         i = triggers.length;
       while (i-- && triggers[i].trigger !== t) {}
-      return i >= 0 ? st.start + (triggers[i].start / containerAnimation.duration()) * (st.end - st.start) : triggers[i].start;
+      return i >= 0
+        ? st.start +
+            (triggers[i].start / containerAnimation.duration()) *
+              (st.end - st.start)
+        : triggers[i].start;
     };
   }
 }
