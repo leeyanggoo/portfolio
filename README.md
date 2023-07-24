@@ -19,12 +19,12 @@
   + 각각 nav의 길이는 section의 전체 길이를 100vh로 비율로 설정
   + 반응형을 고려한 nav 위치 하단 변경 (1023px)
   + scrollTo를 이용한 section 이동
++ section의 tab 메뉴 설정
+  + tab의 data-index와 요소의 index 일치 및 active
 + ascii art의 비율 설정
   + 사용자의 화면 높이를 폰트 크기로 나눠서 폰트 개수 측정
   + 해당 개수를 이용해 사진 크기 조정 후 랜더링
   + 프로필 사진을 흑백 -> 픽셀화 -> rgba 과정으로 변환
-+ section의 tab 메뉴 설정
-  + tab의 data-index와 요소의 index 일치 및 active
 
 # 프로젝트 실행
 + Vite를 설치합니다. `npm create vite@latest`
