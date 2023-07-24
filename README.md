@@ -1,7 +1,7 @@
 # Leeyanggoo Portfolio
 ![leeyanggoo-portfolio web app_ (1)](https://github.com/leeyanggoo/portfolio/assets/125417787/06abfc96-777f-456a-ad9c-26381fcedae1)
 
-> _작업물을 보여드리기 위한 포트폴리오 사이트입니다._
+> ### Hellow, World 👋
 > + Live Demo : https://leeyanggoo-portfolio.web.app/
 > + Refer to : https://www.therawmaterials.com/
 
