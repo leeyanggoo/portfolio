@@ -1,7 +1,7 @@
 # Leeyanggoo Portfolio
 ![leeyanggoo-portfolio web app_ (1)](https://github.com/leeyanggoo/portfolio/assets/125417787/06abfc96-777f-456a-ad9c-26381fcedae1)
 
-> ### Hellow, World 👋
+> ## Hellow, World! 👋
 > + Live Demo : https://leeyanggoo-portfolio.web.app/
 > + Refer to : https://www.therawmaterials.com/
 
